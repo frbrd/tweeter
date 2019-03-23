@@ -1,0 +1,90 @@
+/*-- Styling one Tweet --*/
+
+#posted-tweets article {
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  border: solid #CDCDCD 1px;
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-top: 2em;
+}
+
+#posted-tweets article header h6 {
+  font-size: 32px;
+  line-height: 2em;
+  display: inline;
+  color: #667E85;
+}
+
+#posted-tweets article header img {
+  display: block;
+  width: 50px;
+  height: 50px;
+  float: left;
+  margin: 5px;
+}
+
+
+
+#posted-tweets article p.tweeter-handle {
+  display: block;
+  width: 8.5%;
+  height: 10px;
+  float: right;
+  line-height: 16px;
+  color: #A1A1A1;
+}
+
+#posted-tweets article header  {
+  height: 75px;
+  background-color: #EEEEEE;
+}
+
+#posted-tweets article p.little-tweet {
+  font-weight: lighter;
+  /* height: 45px; */
+  /* line-height: 3em; */
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+#posted-tweets article footer {
+  height: 40px;
+  border-top: solid #CDCDCD 1px;
+}
+
+#posted-tweets article footer span {
+  line-height: 2.5em;
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+/*--- Hover State of the Little Tweet --*/
+
+section#posted-tweets article:hover {
+  background-color: #FFFFFF;
+  border-radius: 5px;
+  border: solid #656565 1px;
+  margin-left: 2em;
+  margin-right: 2em;
+  margin-top: 2em;
+  color: #234651;
+}
+
+section#posted-tweets article:hover header:hover {
+  color: #234651; 
+}
+
+section#posted-tweets article:hover p.tweeter-handle {
+  color: #797979; 
+}
+
+section#posted-tweets article:hover header h6 {
+  color: #234651;
+}
+
+
+section#posted-tweets article:hover header  {
+  height: 75px;
+  background-color: #EEEEEE;
+}

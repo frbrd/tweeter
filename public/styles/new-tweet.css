@@ -1,0 +1,34 @@
+body main.container .new-tweet {
+  border-radius: 5px;
+  background-color: #EEEEEE;
+  border: solid #CDCDCD 1px;
+  padding-top: 5px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  margin-left: 2em;
+  margin-right: 2em;
+}
+
+body main.container .new-tweet textarea {
+  padding: 5px;
+  width: 100%;
+}
+
+body main.container h2 {
+  line-height: 0.1;
+}
+
+body main.container hr {
+  line-height: 0.1;
+}
+
+body main.container section form .counter {
+  display: block;
+  float: right;
+  font-style: italic;
+}
+
+.tooLong {
+  color: red;
+}

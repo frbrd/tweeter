@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta Information -->
+    <title>Tweeter - Home Page</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="/vendor/normalize-4.1.1.css" type="text/css" />
+    
+    <!-- Roboto Condensed 300, 400, 700 from Google -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700" rel="stylesheet"> 
+
+    <!-- App CSS -->
+    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+
+    <!-- Nav CSS -->
+    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+
+    <!-- New Tweet CSS -->
+    <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
+
+    <!-- External JS -->
+    <script type="text/javascript" src="/vendor/jquery-2.2.3.min.js"></script>
+
+    <!-- App JS -->
+    <script type="text/javascript" src="/scripts/app.js"></script>
+
+    <!-- Tweet CSS -->
+    <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
+
+    <!-- Char Counter JS -->
+    <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+  </head>
+
+  <body>
+
+    <!-- Top nav bar (fixed) -->
+    <nav id="nav-bar">
+      <img class="logo" src="/images/bird.png">
+      <span class="header">Tweeter</span>
+      <button type="buttom" value="Compose">Compose</button>
+    </nav>
+
+    <!-- Page-specific (main) content here -->
+    <main class="container">
+      <h3>This Is The Mighty Tweeter</h3>
+      <p>This is not Lorem Ipsum.</p>
+      <section class="new-tweet">
+          <h2>Compose Tweet</h2>
+          <hr />
+          <form method="POST" action="/tweets">
+            <textarea name="text" id="main-textarea-input" placeholder="What are you humming about?"></textarea>
+            <input type="submit" value="Tweet" id="submitTweet">
+            <span class="counter">140</span>
+          </form>
+        </section>
+        
+        <section id="posted-tweets">
+          <!-- <article>
+            <header>
+              <img id="avatarImg" src="https://static.thenounproject.com/png/189787-200.png" />
+              <h6 class="authorName">
+                Bill Fields
+              </h6>
+              <p class="tweeter-handle">
+                  @MrFields
+                </p>
+            </header>
+              <p class="little-tweet">
+                Little tweet here
+              </p>
+            
+            <footer>
+              <span id="daysAgo">10 days ago</span>
+            </footer>
+          </article> -->
+        </section>
+        
+    </main>
+
+  </body>
+</html>
