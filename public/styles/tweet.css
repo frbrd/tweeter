@@ -88,3 +88,29 @@ section#posted-tweets article:hover header  {
   height: 75px;
   background-color: #EEEEEE;
 }
+
+/* ERROR MESSAGES */
+
+main.container #over-error-message {
+  border-radius: 5px;
+  background-color: yellow;
+  height: 3em;
+  text-align: center;
+  padding: 15px 15px 40px 15px;
+  text-align: center;
+  vertical-align: 10%;
+  line-height: 1;
+  margin-bottom: 2em;
+}
+
+main.container #none-error-message {
+  border-radius: 5px;
+  background-color: yellow;
+  height: 3em;
+  text-align: center;
+  padding: 15px 15px 40px 15px;
+  text-align: center;
+  vertical-align: 10%;
+  line-height: 1;
+  margin-bottom: 2em;
+}

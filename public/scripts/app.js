@@ -118,17 +118,26 @@ function renderTweets(data) {
 
 
 $(document).ready(function() {
+  $("#over-error-message").hide();
+  $("#none-error-message").hide();
+
   let textarea = $("#main-textarea-input");
+  
   $("form").on("submit", function (event) {
     event.preventDefault();
-    const serializedData = $(this).serialize()
+    const serializedData = $(this).serialize();
     if (textarea.val().length === 0) {
-      alert("Invalid!");
+      // alert("Invalid!");
+      $("#none-error-message").slideDown("slow");
+      $("#over-error-message").slideUp("slow");        
+
     } else if (textarea.val().length > 140) {
-      alert("Invalid!");
+      // alert("Invalid!");
+      $("#over-error-message").slideDown("slow");
+      $("#none-error-message").slideUp("slow"); 
     } else {
-
-
+      $("#over-error-message").hide();
+      $("#none-error-message").hide();
       textarea.val("");
 
       const options = {
@@ -136,7 +145,7 @@ $(document).ready(function() {
         method: "post",
         data: serializedData
       }
-      
+
       request(options, createTweetElement); 
     }
   });
@@ -153,7 +162,15 @@ $(document).ready(function() {
 
 
   loadTweets();
+
+  $("#compose-btn").click(function(){
+    $(".new-tweet").slideToggle("slow");
+    $("#main-textarea-input").focus();
+  });
+
 });
+
+
 
 
 
