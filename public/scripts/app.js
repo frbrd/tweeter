@@ -120,12 +120,18 @@ function renderTweets(data) {
 $(document).ready(function() {
   $("#over-error-message").hide();
   $("#none-error-message").hide();
+  $(".new-tweet").hide();
 
   let textarea = $("#main-textarea-input");
   
   $("form").on("submit", function (event) {
     event.preventDefault();
+
     const serializedData = $(this).serialize();
+    const resetCounter = $(this).find(".counter");
+
+    resetCounter.text(140);
+    
     if (textarea.val().length === 0) {
       // alert("Invalid!");
       $("#none-error-message").slideDown("slow");
@@ -136,9 +142,11 @@ $(document).ready(function() {
       $("#over-error-message").slideDown("slow");
       $("#none-error-message").slideUp("slow"); 
     } else {
+
       $("#over-error-message").hide();
       $("#none-error-message").hide();
       textarea.val("");
+      
 
       const options = {
         url: "/tweets",

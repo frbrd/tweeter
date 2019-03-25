@@ -24,8 +24,6 @@
   margin: 5px;
 }
 
-
-
 #posted-tweets article p.tweeter-handle {
   display: block;
   width: 8.5%;
@@ -33,6 +31,13 @@
   float: right;
   line-height: 16px;
   color: #A1A1A1;
+  font-size: 1em;
+  text-align: right;
+  margin-right: 50px;
+}
+
+#posted-tweets article header h6.authorName {
+  font-size: 1.5em;
 }
 
 #posted-tweets article header  {

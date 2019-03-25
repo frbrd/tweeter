@@ -32,3 +32,7 @@ body main.container section form .counter {
 .tooLong {
   color: red;
 }
+
+body main.container section.new-tweet {
+  margin-top: 15px;
+}
