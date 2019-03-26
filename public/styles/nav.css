@@ -29,6 +29,7 @@
   border: 1px solid black;
   color: #49e9d0;
   float: right;
+  line-height: 0.5em;
   display: inline;
   margin-top: 1em;
 }

@@ -3,10 +3,6 @@
  * jQuery is already loaded
  * Reminder: Use (and do all your DOM work in) jQuery's document ready function
  */
-
-
-
-
 const data = [
   {
     "user": {
@@ -73,9 +69,11 @@ const request = (options, cb) => {
 
 function createTweetElement (data) {
 
-  const $articleOfTweet = $('<article>');
+  const $articleOfTweet = $("<article>");
   const $header = $("<header>");
+  const $nameDiv = $("<div>");
   const $footer = $("<footer>");
+  const $interactDiv = $("<div>");
 
   $($header)
   .appendTo($articleOfTweet);
@@ -85,14 +83,18 @@ function createTweetElement (data) {
   .text(data.content.text)
   .appendTo($articleOfTweet);
 
+  $($nameDiv)
+  .addClass("left-side-tweet-header")
+  .appendTo($header);
+
   $("<img>")
   .attr("id", "avatarImg")
-  .appendTo($header);
+  .appendTo($nameDiv);
 
   $("<h6>")
   .addClass("authorName")
   .text(data.user.name)
-  .appendTo($header);
+  .appendTo($nameDiv);
 
   $("<p>")
   .addClass("tweeter-handle")
@@ -103,6 +105,25 @@ function createTweetElement (data) {
   .attr("id", "daysAgo")
   .text(data.created_at)
   .appendTo($footer);
+
+  $($interactDiv)
+  .addClass("reactIcons")
+  .appendTo($footer);
+
+  $("<span>")
+  .addClass("glyphicon")
+  .addClass("glyphicon-flag")
+  .appendTo($interactDiv);
+
+  $("<span>")
+  .addClass("glyphicon")
+  .addClass("glyphicon-retweet")
+  .appendTo($interactDiv);
+
+  $("<span>")
+  .addClass("glyphicon")
+  .addClass("glyphicon-thumbs-up")
+  .appendTo($interactDiv);
 
   $($footer)
   .appendTo($articleOfTweet);
@@ -115,7 +136,6 @@ function renderTweets(data) {
     createTweetElement(tweet);
   }
 }
-
 
 $(document).ready(function() {
   $("#over-error-message").hide();

@@ -5,9 +5,6 @@
  */
 
 $(document).ready(function() {
-  // --- our code goes here ---
-  console.log("testing if we are ready");
-
 
   $('#main-textarea-input').on('input', function() {
     var characterCount = $(this).val().length;
@@ -18,7 +15,7 @@ $(document).ready(function() {
       if (characterCount > 140) {
         $(counterElement).addClass("tooLong");
       } else {
-        $(counterElement).removeClass("tooLong");
+          $(counterElement).removeClass("tooLong");
       }
   })
 })

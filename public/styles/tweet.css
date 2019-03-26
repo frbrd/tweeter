@@ -9,11 +9,30 @@
   margin-top: 2em;
 }
 
+#posted-tweets article header div#left-side-tweet-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
 #posted-tweets article header h6 {
+  display: flex;
   font-size: 32px;
-  line-height: 2em;
-  display: inline;
+  font-size: 0.9em;
+  padding-top: 15px;
   color: #667E85;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-block-start: 0; 
+  margin-block-end: 0
+}
+
+#posted-tweets article header {
+  height: 75px;
+  background-color: #EEEEEE;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 #posted-tweets article header img {
@@ -25,24 +44,23 @@
 }
 
 #posted-tweets article p.tweeter-handle {
-  display: block;
-  width: 8.5%;
-  height: 10px;
-  float: right;
-  line-height: 16px;
+  display: flex;
+  line-height: 26px;
   color: #A1A1A1;
-  font-size: 1em;
-  text-align: right;
-  margin-right: 50px;
+  font-size: 0.9em;
+  padding-top: 15px;
+  justify-content: flex-end;
+  flex-direction: row-reverse;
+  align-content: space-around;
+  margin-block-start: 0; 
+  margin-block-end: 0
 }
 
 #posted-tweets article header h6.authorName {
   font-size: 1.5em;
-}
-
-#posted-tweets article header  {
-  height: 75px;
-  background-color: #EEEEEE;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 #posted-tweets article p.little-tweet {
@@ -58,11 +76,38 @@
   border-top: solid #CDCDCD 1px;
 }
 
-#posted-tweets article footer span {
+#posted-tweets article footer span#daysAgo {
   line-height: 2.5em;
   margin-left: 1em;
   margin-right: 1em;
 }
+
+@font-face {
+  font-family:'Glyphicons Halflings';
+  src:url(..bootstrap-3.3.7-dist/fonts/glyphicons-halflings-regular.eot);
+}
+
+#posted-tweets article footer span.reactIcons {
+  height: 50px;
+  overflow: hidden;
+}
+
+#posted-tweets article footer span.glyphicon .glyphicon-flag {
+  display: none;
+}
+
+#posted-tweets article footer span.glyphicon .glyphicon-retweet {
+  display: none;
+  margin-block-start: 0; 
+  margin-block-end: 0
+}
+
+#posted-tweets article footer span.glyphicon .glyphicon-thumbs-up {
+  display: none;
+  color: #CDCDCD;
+  font-size: 2em;
+}
+
 
 /*--- Hover State of the Little Tweet --*/
 
@@ -88,13 +133,37 @@ section#posted-tweets article:hover header h6 {
   color: #234651;
 }
 
-
 section#posted-tweets article:hover header  {
   height: 75px;
   background-color: #EEEEEE;
 }
 
-/* ERROR MESSAGES */
+#posted-tweets article footer.reactIcons {
+  height: 40px;
+  border-top: solid #CDCDCD 1px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+#posted-tweets article footer span.glyphicon .glyphicon-flag:hover {
+  display: inline-block;
+  height: 25px;
+  width: 20px;
+  color: black;
+}
+
+#posted-tweets article footer span.glyphicon .glyphicon-retweet:hover {
+  display: inline-block;
+}
+
+#posted-tweets article footer span.glyphicon .glyphicon-thumbs-up:hover {
+  display: inline-block;
+  color: #CDCDCD;
+  font-size: 2em;
+}
+
+/*--- ERROR MESSAGES ---*/
 
 main.container #over-error-message {
   border-radius: 5px;
